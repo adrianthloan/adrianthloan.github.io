@@ -1,24 +1,34 @@
 import React from "react"
-import { Link } from "gatsby"
 import { StaticImage } from "gatsby-plugin-image"
 
 import Layout from "../components/layout"
-import SEO from "../components/seo"
+import LoanRequest from "../components/loanRequest"
+import RelatedLinks from "../components/relatedLinks"
 
 const IndexPage = () => (
   <Layout>
-    <SEO title="Home" />
-    <h1>Hi people</h1>
-    <p>Welcome to your new Gatsby site.</p>
-    <p>Now go build something great.</p>
-    <div style={{ maxWidth: `300px`, marginBottom: `1.45rem` }}>
-      <StaticImage
-        src="../images/gatsby-astronaut.png"
-        alt="gatsby astronaut"
-      />
+    <div className="flex">
+      <StaticImage className="flex-1" src="../images/m_con01.jpg" alt="con01" />
+      <StaticImage className="flex-1" src="../images/m_con02.jpg" alt="con02" />
     </div>
-    <p><Link to="/page-2/">Go to page 2</Link></p>
-    <p><Link to="/using-typescript/">Go to "Using TypeScript"</Link></p>
+    <div className="flex">
+      <StaticImage className="flex-1" src="../images/m_con03.jpg" alt="con03" />
+      <StaticImage className="flex-1" src="../images/m_con04.jpg" alt="con04" />
+    </div>
+    <div className="flex">
+      <StaticImage className="flex-1" src="../images/m_con05.jpg" alt="con05" />
+      <StaticImage className="flex-1" src="../images/m_con06.jpg" alt="con06" />
+    </div>
+    <div className="flex">
+      <StaticImage className="flex-1" src="../images/m_con07.jpg" alt="con07" />
+      <StaticImage className="flex-1" src="../images/m_con08.jpg" alt="con08" />
+    </div>
+    <div>
+      <LoanRequest />
+    </div>
+    <div>
+      <RelatedLinks />
+    </div>
   </Layout>
 )
 

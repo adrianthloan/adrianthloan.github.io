@@ -1,64 +1,36 @@
 import { Link } from "gatsby"
 import PropTypes from "prop-types"
-import React, { useState } from "react"
+import React from "react"
 
-function Header({ siteTitle }) {
-  const [isExpanded, toggleExpansion] = useState(false)
-
+function Header() {
   return (
-    <nav className="flex flex-wrap items-center justify-between p-6 mb-6 bg-gray-800">
-      <div className="flex items-center flex-shrink-0 mr-6 text-white">
-        <span className="text-xl font-semibold tracking-tight">
-          {siteTitle}
-        </span>
-      </div>
-      <div className="block lg:hidden">
-        <button
-          onClick={() => toggleExpansion(!isExpanded)}
-          className="flex items-center px-3 py-2 text-white border border-white rounded hover:text-white hover:border-white"
-        >
-          <svg
-            className="w-3 h-3 fill-current"
-            viewBox="0 0 20 20"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <title>Menu</title>
-            <path d="M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z" />
-          </svg>
-        </button>
-      </div>
-      <div
-        className={`${
-          isExpanded ? `block` : `hidden`
-        } w-full block flex-grow lg:flex lg:items-center lg:w-auto`}
+    <div className="flex flex-wrap items-center justify-between p-2 sm:p-4 border-b-[3px] border-[#1d488d] w-full max-w-2xl">
+      <Link
+        to={`/`}
+        href="#responsive-header"
+        className="flex flex-col text-xs text-black lg:mt-0"
       >
-        <div className="text-sm lg:flex-grow">
-          <Link
-            to={`/`}
-            href="#responsive-header"
-            className="block mt-4 mr-4 text-white lg:inline-block lg:mt-0 hover:text-white"
-          >
-            Home
-          </Link>
-          <Link
-            to={`/page-2`}
-            className="block mt-4 mr-4 text-white lg:inline-block lg:mt-0 hover:text-white"
-          >
-            page 2
-          </Link>
+        <div>
+          <span className="">티에이치대부중개</span>
         </div>
         <div>
-          <a
-            href="https://github.com/kosvrouvas/gatsby-tailwindcss-starter"
-            target="_blank"
-            rel="noreferrer"
-            className="inline-block px-4 py-2 mt-4 text-sm leading-none text-white border border-white rounded hover:border-transparent hover:text-black hover:bg-white lg:mt-0"
-          >
-            Download
-          </a>
+          <span>2020-서울강서-0032(대부중개업)</span>
         </div>
-      </div>
-    </nav>
+      </Link>
+      <a href="tel:+8210-4283-4569">
+        <div className="text-[#001747] flex text-xs sm:text-sm">
+          <svg
+            className="fill-blue-600 w-4 h-4 pt-1 sm:w-6 sm:h-6"
+            viewBox="0 0 24 24"
+          >
+            <path d="M6.62,10.79C8.06,13.62 10.38,15.94 13.21,17.38L15.41,15.18C15.69,14.9 16.08,14.82 16.43,14.93C17.55,15.3 18.75,15.5 20,15.5A1,1 0 0,1 21,16.5V20A1,1 0 0,1 20,21A17,17 0 0,1 3,4A1,1 0 0,1 4,3H7.5A1,1 0 0,1 8.5,4C8.5,5.25 8.7,6.45 9.07,7.57C9.18,7.92 9.1,8.31 8.82,8.59L6.62,10.79Z" />
+          </svg>
+          <div className="text-[#001747] font-bold">
+            <span>상담</span> | <span>010-4283-4569</span>
+          </div>
+        </div>
+      </a>
+    </div>
   )
 }
 
